@@ -1,8 +1,8 @@
 # DNS Proxy
+
 A simple DNS proxy written in go based on [github.com/miekg/dns](https://github.com/miekg/dns)
 
 ## How to use it
-
 
 ## Docker
 
@@ -23,6 +23,9 @@ $ docker run -p 53:53/udp katakonst/go-dns-proxy:latest -use-outbound -json-conf
 [Download](https://github.com/katakonst/go-dns-proxy/releases)
 
 ## Debian Package
+
+This uses the [go-ian](https://github.com/penguinpowernz/go-ian) utility to build the package. The
+latest version can be installed as a debian package from [the releases page](https://github.com/penguinpowernz/go-ian/releases).
 
 To build the debian package just run the following:
 
