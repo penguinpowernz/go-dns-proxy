@@ -1,0 +1,3 @@
+bin/*
+dpkg/usr/bin/*
+*.deb
