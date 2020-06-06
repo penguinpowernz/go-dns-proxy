@@ -22,6 +22,35 @@ $ docker run -p 53:53/udp katakonst/go-dns-proxy:latest -use-outbound -json-conf
 
 [Download](https://github.com/katakonst/go-dns-proxy/releases)
 
+## Debian Package
+
+To build the debian package just run the following:
+
+```
+make pkg
+```
+
+You will then find a debian package created in `dpkg/pkg`.  Once you have installed it
+then you can start it as a service like so:
+
+```
+sudo systemctl enable dnsproxy
+sudo systemctl start dnsproxy
+```
+
+You can then edit the config file at `/etc/dnsproxy.json`, however you will need to restart
+the server to pickup changes to this file.
+
+You will probably have to disable any `/etc/resolv.conf` managers you have installed and
+create a very simple `/etc/resolv.conf` file:
+
+```
+nameserver 127.0.0.1
+```
+
+This is because the DNS Proxy daemon needs to use port 53 to be picked up by resolv.conf and
+some resolv.conf managers will run on port 53 themselves.
+
 ## Go get
 
 ```shell
@@ -61,3 +90,8 @@ $ go-dns-proxy -use-outbound -json-config='{
     }
 }
 ```
+
+
+## TODO
+
+- [ ] live config file reloading
