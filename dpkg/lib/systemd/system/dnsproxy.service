@@ -1,0 +1,6 @@
+[Install]
+WantedBy=multi-user.target
+
+[Unit]
+EnvironmentFile=/etc/default/dnsproxy
+ExecStart=/usr/bin/dnsproxy ${OPTS}

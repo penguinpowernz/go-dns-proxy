@@ -1,0 +1,9 @@
+{
+    "defaultDns": "8.8.8.8:53",
+    "servers": {
+        "google.com": "8.8.8.8:53"
+    },
+    "domains": {
+        "test.com": "8.8.8.8"
+    }
+}

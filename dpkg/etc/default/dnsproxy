@@ -1,0 +1,1 @@
+OTPS="-file /etc/dnsproxy.json -expiration 30"
