@@ -6,7 +6,7 @@ Architecture: amd64
 Maintainer: Robert McLeod
 Essential: no
 Homepage: https://github.com/penguinpowernz/go-dns-proxy
-Installed-Size: 
+Installed-Size: 7425
 Description: DNS Proxy
   A small DNS proxy server written in go and configurable
   via a JSON file
